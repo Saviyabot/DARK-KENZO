@@ -3,67 +3,74 @@ const {cmd , commands} = require('../command')
 
 cmd({
     pattern: "menu",
-     react: "📜",
-    desc: "get cmd list.",
+    react: '📜',
+    desc: "get cmd list",
     category: "main",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let menu = {
-main: '',
-download: '',
-group: '',
-owner: '',
-convert: '',
-search: ''
-};
-
-for (let i = 0; i < commands.length; i++) {
-if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `.${commands[i].pattern}\n`;
- }
+const img = {
+    menu: 'media/menu.jpg'
 }
 
+let menu = `
 
-let madeMenu = ` 
-👋 *Hello ${pushname}* 
-*𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 𝙼𝙰𝙸𝙽 𝙼𝙴𝙽𝚄*
+*👋 Hllo Broh ${pushname}*
+ 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔
+╭────────────────────●●►
+│👤Bot Owener: 𝐌𝐑 𝐒𝐞𝐧𝐞𝐬𝐡
+│🤖Bot Name: 𝐊𝐄𝐍𝐙𝐎 𝐌𝐃
+│🧬Prefix: [.]
+│🔖Versions: 1.0.0
+│🔮Whatsap Number: +94773673969
+╰─────────────────────●●►
 
-╭━━━━━━━━━━━━━━━━━━━ 
-│*👤Bot Owener: 𝙼𝚁 𝚂𝚎𝚗𝚎𝚜𝚑*
-│*🤖Bot Name: 𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 𝙼𝙳*
-│*🧬Prefix: [.]*
-│*🔖Versions: 1.0.0*
-│*🔮Whatsap Number: +94773673969*
-╰━━━━━━━━━━━━━━━━━━━ 
-╭━━❮ 🔧 MAIN COMMAND ❏
-${menu.main}
-╰━━━━━━━━━━━━━━━━━━━
-╭━━❮ 📥 DOWNLOAD COMMAND ❏ 
-${menu.download}
-╰━━━━━━━━━━━━━━━━━━━
-╭━━❮ 👥 GROUP COMMAND ❏
-${menu.group}
-╰━━━━━━━━━━━━━━━━━━━
-╭━━❮ 🔒 OWNER COMMAND ❏
-${menu.owner}
-╰━━━━━━━━━━━━━━━━━━━
-╭━━❮ 🔄 CONVERT COMMAND ❏
-${menu.convert}
-╰━━━━━━━━━━━━━━━━━━━
-╭━━❮ 🔎 SEARCH COMMAND ❏
-${menu.search}
-╰━━━━━━━━━━━━━━━━━━━
-   `
-   
- await conn.sendMessage(from,{image:{url:"https://ibb.co/84gsCBx"},caption:madeMenu},{quoted:mek})
+╭──────────●●►
+ 🔧𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮
+  ───────
+.menu
+.alive
+╰───────────●●►
+╭──────────●●►
+ 📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐌𝐞𝐧𝐮
+  ───────
+.song
+.video
+.gdrive
+.mediafire
+.fb
+.twitter
+╰───────────●●►
+╭──────────●●►
+ 👥 𝐆𝐫𝐨𝐮𝐩 𝐌𝐞𝐧𝐮
+  ───────
 
+╰───────────●●►
+╭──────────●●►
+ 🔒 𝐎𝐰𝐧𝐞𝐫 𝐌𝐞𝐧𝐮
+  ───────
+.restart
+╰───────────●●►
+╭──────────●●►
+ 🔄 𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐌𝐞𝐧𝐮
+  ───────
 
+╰───────────●●►
+╭──────────●●►
+ 🔎𝐒𝐞𝐚𝐫𝐜𝐡 𝐌𝐞𝐧𝐮
+  ───────
+
+╰───────────●●►
+
+𝐌𝐀𝐃𝐄 𝐁𝐘 𝐊𝐄𝐍𝐙𝐎 𝐌𝐃
+
+`
+await conn.sendMessage(from,{image:{url:img.menu},caption:menu},{quoted:mek})
+    
 }catch(e){
-console.log(e)
+console.log.(e)
 reply(`${e}`)
 }
 })
-
