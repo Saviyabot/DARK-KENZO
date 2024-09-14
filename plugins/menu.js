@@ -10,11 +10,6 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-
-const img = {
-    menu: 'media/menu.jpg'
-}
-
 let menu = `
 
 *👋 Hllo Broh ${pushname}*
@@ -67,10 +62,10 @@ let menu = `
 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐊𝐄𝐍𝐙𝐎 𝐌𝐃
 
 `
-await conn.sendMessage(from,{image:{url:img.menu},caption:menu},{quoted:mek})
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:menu},{quoted:mek})
     
 }catch(e){
-console.log(e)
+console.log.(e)
 reply(`${e}`)
 }
 })
