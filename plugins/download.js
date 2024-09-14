@@ -24,7 +24,7 @@ cmd({
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        if (!q && !q.startsWith("https://")) return reply("give me fb url")
+        if (!q && !q.startsWith("https://")) return reply("PLEASE GIVE ME FB URL📎 ")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
         reply("*🫡Downloading You are Video...*")
@@ -49,7 +49,7 @@ cmd({
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        if (!q && !q.startsWith("https://")) return reply("give me twitter url")
+        if (!q && !q.startsWith("https://")) return reply("PLEASE GIVE ME TWITTER URL📎")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/twitterdl?url=${q}`)
         reply("*🫡Downloading You are Video...*")
