@@ -58,7 +58,7 @@ ${menu.search}
 ╰━━━━━━━━━━━━━━━━━━━
    `
    
- await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/900435c6d3157c98c3c88.jpg"},caption:madeMenu},{quoted:mek})
+ await conn.sendMessage(from,{image:{url:"https://imgtr.ee/image/20240914-114006.hQFQnm"},caption:madeMenu},{quoted:mek})
 
 
 }catch(e){
