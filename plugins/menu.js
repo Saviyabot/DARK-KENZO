@@ -70,7 +70,7 @@ let menu = `
 await conn.sendMessage(from,{image:{url:img.menu},caption:menu},{quoted:mek})
     
 }catch(e){
-console.log.(e)
+console.log(e)
 reply(`${e}`)
 }
 })
