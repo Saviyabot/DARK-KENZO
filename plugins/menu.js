@@ -56,7 +56,9 @@ ${menu.convert}
 ╭━━❮ 🔎 SEARCH COMMAND ❏
 ${menu.search}
 ╰━━━━━━━━━━━━━━━━━━━
- 
+ ╭━━❮ ⚜️ MEDIA COMMAND ❏
+${menu.media}
+╰━━━━━━━━━━━━━━━━━━━
    `
    
  await conn.sendMessage(from,{image:{url:"https://telegra.ph/file/900435c6d3157c98c3c88.jpg"},caption:madeMenu},{quoted:mek})
