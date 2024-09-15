@@ -61,7 +61,9 @@ ${menu.search}
    `
    
 await conn.sendMessage(from,{image;{url:img.menu},caption:tex},{quoted:mek})
-
+const img = {
+     menu:'media/media_menu.jpg'
+}
 
 }catch(e){
 console.log(e)
