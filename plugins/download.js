@@ -37,6 +37,31 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     }
 })
 
+//tiktok downloader
+cmd({
+    pattern: "tiktok",
+    alias: ["tt"],
+    desc: "download tt videos",
+    category: "download",
+    react: "⬇️",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        if (!q && !q.startsWith("https://")) return reply("GIVE ME TIKTOK URL")
+        //fetch data from api  
+        let data = await fetchJson(`${baseUrl}/api/tiktokdl?url=${q}`)
+        reply("*📥Downloading You are Video...*")
+        //send video (wm,nwm)
+        await conn.sendMessage(from, { video: { url: data.data.no_wm }, mimetype: "video/mp4", caption: `- NO-WATERMARK\n\n ${𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 𝙼𝙳}` }, { quoted: mek })
+        await conn.sendMessage(from, { video: { url: data.data.wm }, mimetype: "video/mp4", caption: `- WITH-WATERMARK \n\n ${𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 𝙼𝙳}` }, { quoted: mek })  
+        //send audio    
+        await conn.sendMessage(from, { audio: { url: data.data.audio }, mimetype: "audio/mpeg" }, { quoted: mek })  
+    } catch (e) {
+        console.log(e)
+        reply(`${e}`)
+    }
+})
 
 //twitter dl (x)
 cmd({
