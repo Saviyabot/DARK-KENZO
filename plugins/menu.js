@@ -59,11 +59,7 @@ ${menu.search}
 
  *𝙼𝙰𝙳𝙴 𝙱𝚈 𝙼𝚁 𝚂𝙴𝙽𝙴𝚂𝙷*
    `
-   
-await conn.sendMessage(from,{image;{url:img.menu},caption:tex},{quoted:mek})
-const img = {
-     menu:'media/media_menu.jpg'
-}
+await conn.sendMessage(from,{image:{url:config.MENU_IMG},caption:menu},{quoted:mek})
 
 }catch(e){
 console.log(e)
