@@ -1,5 +1,6 @@
-const config = require('../config')
-const {cmd , commands} = require('../command')
+const { updateEnv, readEnv } = require('../lib/database');
+const EnvVar = require('../lib/mongodbenv');
+const { cmd } = require('../command');
 
 cmd({
     pattern: "update",
