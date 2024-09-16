@@ -73,7 +73,7 @@ ${menu.anime}
 ${menu.fun}
 ╰━━━━━━━━━━━━━━━━━━━
 
- *𝙼𝙰𝙳𝙴 𝙱𝚈 𝙼𝚁 𝚂𝙴𝙽𝙴𝚂𝙷*
+> *𝙼𝙰𝙳𝙴 𝙱𝚈 𝙼𝚁 𝚂𝙴𝙽𝙴𝚂𝙷*
    `
 await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
     
