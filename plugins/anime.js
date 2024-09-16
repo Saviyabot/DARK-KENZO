@@ -46,7 +46,7 @@ try{
 let res = await axios.get('https://api.waifu.pics/sfw/waifu')
 let wm = `🧧 Random Waifu image
 
-𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾v${require("../package.json").version} (Test)\ns𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
+𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\n𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
 await conn.sendMessage(from, { image: { url: res.data.url }, caption: wm}, { quoted: mek })
 } catch (e) {
 reply(cants)
@@ -69,7 +69,7 @@ try{
 let res = await axios.get('https://api.waifu.pics/sfw/neko')
 let wm = `🧧 Random neko image
 
-𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\ns𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
+𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\n𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
 await conn.sendMessage(from, { image: { url: res.data.url  }, caption: wm}, { quoted: mek })
 } catch (e) {
 reply(cants)
@@ -92,7 +92,7 @@ try{
 let res = await axios.get('https://api.waifu.pics/sfw/megumin')
 let wm = `🧧 Random megumin image
 
-𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\ns𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
+𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\n𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
 await conn.sendMessage(from, { image: { url: res.data.url }, caption: wm}, { quoted: mek })
 } catch (e) {
 reply(cants)
@@ -115,7 +115,7 @@ try{
 let res = await axios.get('https://api.waifu.im/search/?included_tags=maid')
 let wm = `🧧 Random maid image
 
-𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\ns𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
+𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\n𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
 await conn.sendMessage(from, { image: { url: res.data.images[0].url  }, caption: wm}, { quoted: mek })
 } catch (e) {
 reply(cants)
@@ -138,7 +138,7 @@ try{
 let res = await axios.get('https://api.waifu.pics/sfw/awoo')
 let wm = `🧧 Random awoo image
 
-𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\ns𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
+𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 v${require("../package.json").version} (Test)\n𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾`
 await conn.sendMessage(from, { image: { url: res.data.url }, caption: wm}, { quoted: mek })
 } catch (e) {
 reply(cants)
