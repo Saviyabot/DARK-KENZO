@@ -6,9 +6,6 @@ function convertToBool(text, fault = 'true') {
 }
 module.exports = {
 SESSION_ID: process.env.SESSION_ID || "xSkUkIwD#xnHDi1lZl8GgFTlkOUQklL811mNy0igBAEN3UEGRAAo",
-ALIVE_IMG: process.env.ALIVE_IMG || "https://i.ibb.co/GWMn14L/connet.jpg",
-ALIVE_MSG: process.env.ALIVE_MSG || "Hello I am Kenzo-Md i am alive now..!",
-AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
-MODE: process.env.MODE || "public",
+MONGOSB: process.env.MONGODB || "entr you are mongodb url hre",
 SUDO_NB: process.env.SUDO_NB || "94773673969"
 };
