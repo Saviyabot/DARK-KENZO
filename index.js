@@ -17,7 +17,7 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const prefix = '.'
+
 
 const ownerNumber = ['94773673969']
 
@@ -39,6 +39,14 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
+//=======connect-mongodb=======================
+const connectDB = require('./lib/mongodb')
+connectDB();
+//=============================================
+const {readEnv} = require('./lib/database')
+const config = await readEnv();
+const orefix = config.PREFIX
+//==============================================
 console.log("Connecting dark-kenzo-bot 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
@@ -69,7 +77,7 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Dark-Kenzo-Md connected to whatsapp ✅')
 
-let up = `Dark-Kenzo-Md connected successful ✅\n\nPREFIX: ${prefix}`;
+let up = `DARK-KENZO-MD CONNECTED SUCCESSFUL  ✅\n\nPREFIX: ${prefix}`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://i.ibb.co/GWMn14L/connet.jpg` }, caption: up })
 
@@ -174,7 +182,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("hey, bot started✅");
+res.send("hey, dark kenzo started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
