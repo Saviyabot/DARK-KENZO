@@ -44,7 +44,7 @@ let downloadUrl = down.dl_url
 
 //send audio + document message
 await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"©  ᴹᴬᴰᴱ ᴮʸ ᴰᴬᴿᴷ ᴷᴱᴺᶻᴼ "},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"©  𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 𝙼𝙳 "},{quoted:mek})
 
 }catch(e){
 console.log(e)
@@ -98,7 +98,7 @@ let downloadUrl = down.dl_url
 
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
 
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"©  ᴹᴬᴰᴱ ᴮʸ ᴰᴬᴿᴷ ᴷᴱᴺᶻᴼ "},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"© 𝙳𝙰𝚁𝙺 𝙺𝙴𝙽𝚉𝙾 𝙼𝙳 "},{quoted:mek})
 
 
 }catch(e){
