@@ -17,6 +17,7 @@
     "express": "latest",
     "axios": "^1.2.5",
     "file_size_url": "^1.0.6",
+    "fb-downloader-scrapper": "^2.0.0",
     "fs-extra": "^11.2.0",
     "path": "^0.12.7",
     "node-fetch": "^2.6.1",
