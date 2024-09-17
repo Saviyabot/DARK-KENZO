@@ -21,7 +21,7 @@ cmd({
         const url = q.replace(/\?mibextid=[^&]*/, '');
         getFbVideoInfo(url)
             .then((result) => {
-                const msg = `\`✦ 𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 ✦\`
+                const msg = `\`Facebook Download\`
 `
 
                 let buttons = [{
