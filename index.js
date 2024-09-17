@@ -180,9 +180,30 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 }});
 //============================================================================ 
 
-        
-})
-}
+switch (command) {
+  case 'jid':
+  reply(from)
+  break
+  
+  default:				
+  if (isOwner && body.startsWith('>')) {
+  let bodyy = body.split('>')[1]
+  let code2 = bodyy.replace("°", ".toString()");
+  try {
+  let resultTest = await eval(code2);
+  if (typeof resultTest === "object") {
+  reply(util.format(resultTest));
+  } else {
+  reply(util.format(resultTest));
+  }
+  } catch (err) {
+  reply(util.format(err));
+  }}}
+  } catch (e) {
+  const isError = String(e)
+  console.log(isError)}
+  })
+  }
 app.get("/", (req, res) => {
 res.send("hey, dark kenzo started✅");
 });
