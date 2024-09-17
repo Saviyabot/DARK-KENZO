@@ -1,13 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const {readEnv} = require('../databass/database')
 const {cmd , commands} = require('../command')
 
 
 cmd({
 on: "body"
 },    
-async (fire, mek, m, { from, body, isOwner }) => {
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+    
 const filePath = path.join(__dirname, '../Voice/autovoice.json');
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 for (const text in data) {
@@ -15,8 +16,8 @@ if (body.toLowerCase() === text.toLowerCase()) {
 const config = await readEnv();
 if (config.AUTO_VOICE === 'true') {
 //if (isOwner) return;        
-await fire.sendPresenceUpdate('recording', from);
-await fire.sendMessage(from, { audio: { url: data[text] }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
+await conn.sendPresenceUpdate('recording', from);
+await conn.sendMessage(from, { audio: { url: data[text] }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
 }
 }
 }                
