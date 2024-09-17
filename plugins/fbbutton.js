@@ -13,8 +13,9 @@ cmd({
 
 },
 
-    async (conn, m, mek, { from, q, reply }) => {
-        if (!q || !q.includes('facebook.com')) return await reply('*Please enter a valid facebook url!*');
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {       
+    if (!q || !q.includes('facebook.com')) return await reply('*Please enter a valid facebook url!*');
         const url = q.replace(/\?mibextid=[^&]*/, '');
         getFbVideoInfo(url)
             .then((result) => {
@@ -67,7 +68,7 @@ cmd({
     filename: __filename
 },
 
-    async (conn, mek, m, { from, q, reply }) => {
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
         try {
             if (!q) return await reply('*Not Found!*')
 
