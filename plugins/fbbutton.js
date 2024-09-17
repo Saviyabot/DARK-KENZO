@@ -1,9 +1,6 @@
 const config = require('../config')
 const getFbVideoInfo = require("fb-downloader-scrapper")
-const {
-    cmd,
-    commands
-} = require('../command')
+const { cmd, commands} = require('../command')
 
 
 cmd({
