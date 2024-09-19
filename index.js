@@ -139,13 +139,6 @@ if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && !isGroup && config.MODE === "groups") return   
 
-if(config.AUTO_VOICE == 'true' ) {
-const url = 'https://gist.github.com/mrhansamala/1ba620b545c9565332ddeb576a3f83f5/raw'
-let { data } = await axios.get(url)
-for (vr in data){
-if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { url : data[vr]},mimetype: 'audio/mpeg',ptt:true},{quoted:mek})   
-}
-}
 
 //=====================================================================================
 const events = require('./command')
