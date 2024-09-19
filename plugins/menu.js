@@ -18,7 +18,7 @@ group: '',
 owner: '',
 convert: '',
 search: '',
-anime: '',
+animegirl: '',
 fun: ''
 };
 
@@ -86,7 +86,7 @@ ${menu.search}
 
 > 🔮𝐌𝐀𝐃𝐄 𝐁𝐘 𝐌𝐑 𝐒𝐄𝐍𝐄𝐒𝐇🔮
 
-╭━━❮ 🎭 ANIME COMMAND ❯━━━━━━╮
+╭━━❮ 🎭 ANIMEGIRL COMMAND ❯━━━━━━╮
 ────────────────────
 ${menu.anime}
 ╰━━━━━━━━━━━━━━━━━━━
@@ -100,8 +100,8 @@ ${menu.fun}
 
 > 🔮𝐌𝐀𝐃𝐄 𝐁𝐘 𝐌𝐑 𝐒𝐄𝐍𝐄𝐒𝐇🔮
    `
-await conn.sendMessage(from, { audio: fs.readFileSync('./Voice/menu.mp3') , ptt: true  , mimetype: 'audio/mpeg'}, { quoted: mek })
-return await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
+
+return await conn.sendMessage(from,{image:{url:"https://i.ibb.co/GWMn14L/connet.jpg"},caption:madeMenu},{quoted:mek})
     
 }catch(e){
 console.log(e)
